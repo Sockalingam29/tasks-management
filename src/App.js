@@ -1,69 +1,51 @@
 import './App.css';
-import TextField from '@material-ui/core/TextField';
-import { Button} from '@material-ui/core';
-import { useEffect, useState } from 'react';
-import { db } from './firebase_config';
 import firebase from "firebase";
 import TodoList from './todo';
+import AppPage from "./appPage";
+import { useState } from 'react';
 
 function App() {
+  const[login,setLogin]=useState("");
   
-  const [toDo, setToDo] = useState("");
-  const [data,setData]=useState([]);
+  function loginHandler(){
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth()
+  .signInWithPopup(provider)
+ .then((result) => {
+    
+    var credential = result.credential;
 
-  useEffect(() => {
-    dispToDo();
-  }, [])
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  }) 
 
-  function addToDo(e){
-      e.preventDefault();
-      db.collection("toDoList").add({
-        toDo:toDo,
-        time:firebase.firestore.FieldValue.serverTimestamp(),
-        completed:false,
-      });
-      setToDo("");
+  .catch((error) => {
+        console.log(error);
+  });
   }
+  
+  const Login=()=>(
+      <div><h1>Ready to login?</h1>
+      <button onClick={loginHandler}>Login with Google</button>
+      </div>
+  )
 
-  
-  
-  function dispToDo(){  
-    db.collection("toDoList").orderBy("time", "asc").onSnapshot(function(query){
-    setData(
-      query.docs.map((element)=>({
-        id:element.id,
-        toDo:element.data().toDo,
-        completed:element.data().completed,
-      }))
-    );
+  {firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      setLogin("1");
+    } else {
+      setLogin("2")
     }
-    );
-  }
+  });}
+ 
 
   return (
     <div className="App">
-      <div className="follow" style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-      <h1>To-Do list</h1>
-      <form style={{display:"flex"}}>
-        <TextField style={{paddingRight:"10px",width:"600px"}} id="standard-basic" onChange={
-          (e)=>setToDo(e.target.value)} label="Add items to your list" value={toDo} />
-        <Button type="submit" onClick={addToDo} variant="contained" >Add</Button>
-      </form>
-      
-      <div style={{ width: "90vw", maxWidth: "600px", marginTop: "24px" }}>
-          <ol>{data.map((todo) => (
-            <li><TodoList
-              todo={todo.toDo}
-              inprogress={todo.completed}
-              id={todo.id}
-            /></li>
-          ))}
-          
-          </ol>
-        </div>
-    </div>
+      {login === "1" ? <AppPage/> : <Login/>}
     </div>
   );
 }
-
 export default App;

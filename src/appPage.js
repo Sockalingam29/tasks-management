@@ -61,16 +61,16 @@ function logoutHandler(){
       </form>
       
       <div style={{ width: "90vw", maxWidth: "600px", marginTop: "24px" }}>
-          <ul reversed style={{listStyleType:"none"}}>{data.map((todo) => (
-            <li><TodoList
+          {data.map((todo) => (
+            <TodoList
               todo={todo.toDo}
               inprogress={todo.completed}
               id={todo.id}
-            /></li>
+            />
             
           ))}
           
-          </ul>
+          
         </div>
         </div>
       </div>

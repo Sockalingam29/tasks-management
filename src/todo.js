@@ -20,7 +20,7 @@ export default function TodoList({ todo, inprogress, id }) {
         <div>
             
             <div style={{display:"flex", padding:"10px 0px"}}>
-            <p style={{border:"1px solid white",margin:"auto",width:"100%"}}>
+            <p style={{margin:"auto",width:"100%"}}>
                 <div>{inprogress ? <strike>{todo}</strike> : <strong>{todo}</strong>}</div>
                 <small>{inprogress ? "Done" : "In Progress"}</small>
                 

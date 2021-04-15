@@ -54,10 +54,10 @@ function logoutHandler(){
       <div className="follow" style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
       
         <h1 style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"center"}}>
-        <div style={{margin:"auto",paddingLeft:"20px"}}>To-Do list</div>
+        <div style={{margin:"auto",paddingLeft:"20px",font:"50px bold"}}>To-Do list</div>
         <div style={{marginRight:"20px"}}><button onClick={logoutHandler}>Logout</button></div>
         </h1>
-        <img src="file:///C:/Users/kanna/Downloads/undraw_To_do_list_re_9nt7.svg"></img>
+        <img src="images/img.svg"></img>
       <form style={{display:"flex"}}>
         <TextField style={{paddingRight:"10px",width:"600px"}} id="standard-basic" onChange={
           (e)=>setToDo(e.target.value)} label="Add items to your list" value={toDo} />

@@ -1,6 +1,5 @@
 import './App.css';
 import firebase from "firebase";
-import TodoList from './todo';
 import AppPage from "./appPage";
 import { useState } from 'react';
 
@@ -10,27 +9,24 @@ function App() {
   function loginHandler(){
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth()
-  .signInWithPopup(provider)
- .then((result) => {
-    
-    var credential = result.credential;
-
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }) 
-
-  .catch((error) => {
-        console.log(error);
-  });
+    .signInWithPopup(provider)
+    .then((result) => { 
+      var credential = result.credential;
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+    }) 
+    .catch((error) => {
+      console.log(error);
+    });
   }
   
   const Login=()=>(
-      <div><h1>Ready to login?</h1>
-      <button onClick={loginHandler}>Login with Google</button>
-      </div>
+    <div><h1>Ready to login?</h1>
+    <button onClick={loginHandler}>Login with Google</button>
+    </div>
   )
 
   {firebase.auth().onAuthStateChanged(function(user) {
@@ -39,9 +35,8 @@ function App() {
     } else {
       setLogin("2")
     }
-  });}
+  })}
  
-
   return (
     <div className="App">
       {login === "1" ? <AppPage/> : <Login/>}

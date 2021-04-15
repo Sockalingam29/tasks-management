@@ -12,7 +12,7 @@ export default function AppPage() {
 
 useEffect(() => {
   dispToDo();
-}, [])
+}, [toDo])
 
 function addToDo(e){
     e.preventDefault();

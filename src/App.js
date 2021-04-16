@@ -3,6 +3,7 @@ import firebase from "firebase";
 import AppPage from "./appPage";
 import { useState } from 'react';
 import { Button } from '@material-ui/core';
+import {ReactComponent as Logo} from "./img.svg";
 
 function App() {
   const[login,setLogin]=useState("");
@@ -26,12 +27,13 @@ function App() {
   }
   
   const Login=()=>(
-    <div style={{display:"flex",alignItems:"center",flexDirection:"column",justifyContent:"center",height:"100%",margin:"100px"}}>
-      <h1 style={{font:"50px bold"}}>
-        <div>The To-Do App</div>
-        <img src="src/images/img.svg"/>
-        <div>Ready to login?</div></h1>
-    <Button variant="contained" onClick={loginHandler}>Login with your Google acccount</Button>
+    <div id="bg" style={{display:"flex",position:"absolute",bottom:"0",top:"0",right:"0",left:"0",height:"",margin:"",alignItems:"center",justifyContent:"center"}}>
+      <div style={{border:"1px solid black",backgroundColor:"#dae0db",padding:"2rem",borderRadius:"1rem"}}>
+        <h1 style={{font:"50px bold",}}>
+        <div style={{textAlign:"center"}}><strong>The To-Do App</strong></div>
+        <div>Login with Google</div></h1>
+        <Button style={{marginLeft:"150px",marginTop:"15px"}} variant="contained" color="primary" onClick={loginHandler}>Login/SignUp</Button>
+      </div>
     </div>
   )
 

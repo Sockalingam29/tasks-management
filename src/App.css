@@ -1,11 +1,11 @@
-.follow form{
+/*.follow form{
     position: sticky;
     top:0px;
     background-color: WHITE;
     width:75%;
     max-width: 600px;
 
-}
+}*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400;1,700&display=swap');
 *{
   margin: 0;
@@ -17,4 +17,39 @@
     background:url("https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80");
     background-position-x: center;
 
+}
+.link{
+    text-decoration:none;
+    padding:0.5rem 1rem;
+    text-shadow: 1px;
+}
+    
+
+.link:hover{
+    text-decoration: underline;
+}
+.list-non-bullet{
+    list-style: none;
+}
+.list-item-inline{
+    display: inline;
+    padding:0rem 0.5rem;
+}
+/*footer{
+    background-color: black;
+    margin-top: 2rem;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-top-right-radius: 1rem;
+}*/
+.footer .link{
+    color: black;
+}
+.footer ul{
+    padding-inline-start: 0px;
+}
+.footer-header{
+    font-weight: bold;
+    font-size: 1.1rem;
 }

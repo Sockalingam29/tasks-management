@@ -27,11 +27,11 @@ function App() {
   
   const Login=()=>(
     <div id="bg" style={{display:"flex",position:"absolute",bottom:"0",top:"0",right:"0",left:"0",height:"",margin:"",alignItems:"center",justifyContent:"center"}}>
-      <div style={{border:"1px solid black",backgroundColor:"#dae0db",padding:"2rem",borderRadius:"1rem"}}>
+      <div style={{border:"1px solid black",backgroundColor:"#dae0db",padding:"4rem 2rem",borderRadius:"1rem"}}>
         <h1 style={{font:"50px bold",}}>
-        <div style={{textAlign:"center"}}><strong>The To-Do App</strong></div>
-        <div>Login with Google</div></h1>
-        <Button style={{marginLeft:"150px",marginTop:"15px"}} variant="contained" color="primary" onClick={loginHandler}>Login/SignUp</Button>
+        <div style={{textAlign:"center"}}><strong>To-Do App</strong></div>
+        <div><small>Login with Google</small></div></h1>
+        <Button style={{marginLeft:"100px",marginTop:"15px"}} variant="contained" color="primary" onClick={loginHandler}>Login/SignUp</Button>
       </div>
     </div>
   )

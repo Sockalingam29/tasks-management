@@ -3,7 +3,6 @@ import firebase from "firebase";
 import AppPage from "./appPage";
 import { useState } from 'react';
 import { Button } from '@material-ui/core';
-import {ReactComponent as Logo} from "./img.svg";
 
 function App() {
   const[login,setLogin]=useState("");

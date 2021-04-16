@@ -57,7 +57,7 @@ function logoutHandler(){
         <div style={{margin:"auto",paddingLeft:"20px",font:"50px bold"}}>To-Do list</div>
         <div style={{marginRight:"20px"}}><Button onClick={logoutHandler}>Logout</Button></div>
         </h1>
-        <img src="images/img.svg" />
+        
       <form style={{display:"flex"}}>
         <TextField style={{paddingRight:"10px",width:"600px"}} id="standard-basic" onChange={
           (e)=>setToDo(e.target.value)} label="Add items to your list" value={toDo} />

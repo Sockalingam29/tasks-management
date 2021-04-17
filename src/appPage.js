@@ -54,19 +54,19 @@ function logoutHandler(){
     
       <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
       
-        <h1 style={{height:"150px",marginBottom:"1.5rem",border:"1px solid white", borderBottomLeftRadius:"2.5rem",
+        <h1 style={{height:"120px",marginBottom:"1.5rem",border:"1px solid white", borderBottomLeftRadius:"2.5rem",
                   backgroundColor:"#ededf0",display:"flex",width:"100%",alignItems:"center",justifyContent:"center"}}>
-        <div style={{margin:"auto",paddingTop:"20px",paddingLeft:"20px",font:"50px bold"}}>To-Do app</div>
+        <div style={{margin:"auto",paddingTop:"20px",paddingLeft:"20px",font:"50px bold"}}><strong>To-Do app</strong></div>
         <div style={{marginRight:"20px"}}><Button onClick={logoutHandler}>Logout</Button></div>
         </h1>
         
-      <form style={{display:"flex"}}>
+      <form style={{display:"flex",maxWidth:"100%"}}>
         <TextField style={{paddingRight:"10px",width:"600px"}} id="standard-basic" onChange={
           (e)=>setToDo(e.target.value)} label="Add items to your list" value={toDo} />
         <Button type="submit" onClick={addToDo} variant="contained" >Add</Button>
       </form>
       
-      <div style={{ width: "90vw", maxWidth: "600px", marginTop: "24px" }}>
+      <div style={{minHeight:"100%", width: "90vw", maxWidth: "600px", marginTop: "24px" }}>
           {data.map((todo) => (
             <TodoList
               todo={todo.toDo}
@@ -76,10 +76,10 @@ function logoutHandler(){
             
           ))}
         </div>
-        <footer class="footer" style={{marginTop:"1.5rem",display:"flex",flexDirection:"column",width:"100%",backgroundColor:"#ededf0",borderTopRightRadius:"2.5rem",border:"1px solid white",color:"black",alignItems:"center",justifyContent:"center"}}>
-        <div class="footer-header" style={{padding:"1.5rem"}}>Made by Sockalingam</div>
+        <footer class="footer" style={{marginTop:"1.5rem",display:"flex",flexDirection:"column",width:"100%",backgroundColor:"#ededf0",borderTopRightRadius:"2.5rem",border:"1px solid white",color:"black",alignItems:"center",justifyContent:"flex-end"}}>
+        <div class="footer-header" style={{padding:"1rem"}}>Made by Sockalingam</div>
         <div style={{padding:"0rem"}}>Connect with me:</div>
-        <ul class="list-non-bullet" style={{padding:"1.5rem"}}>
+        <ul class="list-non-bullet" style={{padding:"1rem"}}>
             <li class="list-item-inline"><a class="link" href="https://github.com/Sockalingam29">Github</a></li>
             <li class="list-item-inline"><a class="link" href="https://instagram.com/sockalingam_a">Instagram</a></li>
             <li class="list-item-inline"><a class="link" href="https://www.linkedin.com/in/sockalingam-a-20ab7b1b6">LinkedIn</a></li>

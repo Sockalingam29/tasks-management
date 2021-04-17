@@ -54,8 +54,9 @@ function logoutHandler(){
     
       <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
       
-        <h1 style={{height:"150px",marginBottom:"1.5rem",border:"1px solid white", borderBottomLeftRadius:"2.5rem",backgroundColor:"#ededf0",display:"flex",width:"100%",alignItems:"center",justifyContent:"center"}}>
-        <div style={{margin:"auto",paddingTop:"20px",paddingLeft:"20px",font:"50px bold"}}>To-Do list</div>
+        <h1 style={{height:"150px",marginBottom:"1.5rem",border:"1px solid white", borderBottomLeftRadius:"2.5rem",
+                  backgroundColor:"#ededf0",display:"flex",width:"100%",alignItems:"center",justifyContent:"center"}}>
+        <div style={{margin:"auto",paddingTop:"20px",paddingLeft:"20px",font:"50px bold"}}>To-Do app</div>
         <div style={{marginRight:"20px"}}><Button onClick={logoutHandler}>Logout</Button></div>
         </h1>
         

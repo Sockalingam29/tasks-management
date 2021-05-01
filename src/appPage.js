@@ -77,7 +77,7 @@ function logoutHandler(){
           ))}
         </div>
         <footer class="footer" style={{marginTop:"1.5rem",display:"flex",flexDirection:"column",width:"100%",backgroundColor:"#ededf0",borderTopRightRadius:"2.5rem",border:"1px solid white",color:"black",alignItems:"center",justifyContent:"flex-end",
-                                      position:"absolute",left:"0",bottom:"0",height:"180px"}}>
+                                      position:"absolute",left:"0",bottom:"0",overflow:"hidden"}}>
         <div class="footer-header" style={{padding:"1rem"}}>Made by Sockalingam</div>
         <div style={{padding:"0rem"}}>Connect with me:</div>
         <ul class="list-non-bullet" style={{padding:"1rem"}}>

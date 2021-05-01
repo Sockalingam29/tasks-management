@@ -76,12 +76,13 @@ function logoutHandler(){
             
           ))}
         </div>
-        <footer class="footer" style={{marginTop:"1.5rem",display:"flex",flexDirection:"column",width:"100%",backgroundColor:"#ededf0",borderTopRightRadius:"2.5rem",border:"1px solid white",color:"black",alignItems:"center",justifyContent:"flex-end"}}>
+        <footer class="footer" style={{marginTop:"1.5rem",display:"flex",flexDirection:"column",width:"100%",backgroundColor:"#ededf0",borderTopRightRadius:"2.5rem",border:"1px solid white",color:"black",alignItems:"center",justifyContent:"flex-end",
+                                      position:"absolute",left:"0",bottom:"0"}}>
         <div class="footer-header" style={{padding:"1rem"}}>Made by Sockalingam</div>
         <div style={{padding:"0rem"}}>Connect with me:</div>
         <ul class="list-non-bullet" style={{padding:"1rem"}}>
             <li class="list-item-inline"><a class="link" href="https://github.com/Sockalingam29">Github</a></li>
-            <li class="list-item-inline"><a class="link" href="https://instagram.com/sockalingam_a">Instagram</a></li>
+            <li class="list-item-inline"><a class="link" href="https://htmlbysocka.netlify.app/">Portfolio</a></li>
             <li class="list-item-inline"><a class="link" href="https://www.linkedin.com/in/sockalingam-a-20ab7b1b6">LinkedIn</a></li>
 
         </ul>

@@ -36,7 +36,7 @@ function App() {
         <div style={{fontSize:"24px",margin:"10px 0px"}}>The go-to task managment app</div>
         <Button style={{margin:"10px 0px",padding:"15px 25px"}} variant="contained" color="primary" onClick={loginHandler}>Get in with Google</Button>
       </div>
-      <div>
+      <div style={{marginTop:"24px"}}>
         <h3>Why should you use?</h3>
         <ul>
           <li>With only your Google account, access your tasks on all your devices.</li>

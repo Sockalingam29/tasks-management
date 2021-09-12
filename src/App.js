@@ -3,6 +3,7 @@ import firebase from "firebase";
 import AppPage from "./appPage";
 import { useState } from 'react';
 import { Button } from '@material-ui/core';
+import background from './background.svg'
 
 function App() {
   const[login,setLogin]=useState("");
@@ -26,13 +27,24 @@ function App() {
   }
   
   const Login=()=>(
-    <div id="bg" style={{display:"flex",position:"absolute",bottom:"0",top:"0",right:"0",left:"0",height:"",margin:"",alignItems:"center",justifyContent:"center"}}>
-      <div style={{border:"2px solid black",backgroundColor:"#dae0db",padding:"3.5rem 1rem",borderRadius:"1.5rem"}}>
-        <h1 style={{font:"35px bold",}}>
-        <div style={{textAlign:"center"}}><strong>To-Do App</strong></div>
-        <div><small>Login with Google</small></div></h1>
-        <Button style={{marginLeft:"56px",marginTop:"15px"}} variant="contained" color="primary" onClick={loginHandler}>Login/SignUp</Button>
+    <div className="grid-container">
+     <div className="grid-img"> <img src={background}/> </div>
+    
+     <div style={{display:"flex",alignItems:"center",justifyContent:"center", flexDirection:"column"}}>
+      <div style={{textAlign:"center"}}>
+        <div style={{fontSize:"52px",fontWeight:"bolder",margin:"10px 0px"}}>Organise your day!</div>
+        <div style={{fontSize:"24px",margin:"10px 0px"}}>The go-to task managment app</div>
+        <Button style={{margin:"10px 0px",padding:"15px 25px"}} variant="contained" color="primary" onClick={loginHandler}>Get in with Google</Button>
       </div>
+      <div style={{marginTop:"24px"}}>
+        <h3>Why should you use?</h3>
+        <ul>
+          <li>With only your Google account, access your tasks on all your devices.</li>
+          <li>Seemless and super-fast</li>
+          <li>Only your email id collected.</li>
+        </ul>
+      </div>
+    </div> 
     </div>
   )
 

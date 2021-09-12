@@ -60,7 +60,7 @@ function logoutHandler(){
         <div style={{marginRight:"20px"}}><Button onClick={logoutHandler}>Logout</Button></div>
         </h1>
         
-      <form style={{display:"flex",maxWidth:"100%"}}>
+        <form style={{display:"flex",maxWidth:"100%"}}>
         <TextField style={{paddingRight:"10px",width:"600px"}} id="standard-basic" onChange={
           (e)=>setToDo(e.target.value)} label="Add items to your list" value={toDo} />
         <Button type="submit" onClick={addToDo} variant="contained" >Add</Button>
